@@ -40,7 +40,7 @@ instance FromJSON JwsAlgJson where
         "ES384" -> pure $ JwsAlgJson ES384
         "ES512" -> pure $ JwsAlgJson ES512
         "none"  -> pure $ JwsAlgJson None
-        other   -> fail $ "Non-supported alg: " <> show (unpack other)
+        other   -> fail $ "Non-supported alg: " ++ show (unpack other)
 
 
 -- | An OpenID Provider Configuration
